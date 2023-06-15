@@ -2,6 +2,8 @@
 title: "Economic Connectedness"
 author: "David Kane"
 format: html
+execute: 
+  echo: FALSE
 ---
 
 
@@ -9,9 +11,21 @@ format: html
 #| echo: false
 #| message: false
 library(tidyverse)
+library(readr)
 ```
 
 ```{r}
-
+#| message: false
+#We need pop2018, countyname, econ connectedness
+read_csv("data/social_capital_county.csv", 
+              show_col_types = FALSE) |>
+  select(county_name, pop2018, ec_county) |>
+  mutate(state = )
 ```
+
+
+```{r}
+summary(x)
+```
+
 
